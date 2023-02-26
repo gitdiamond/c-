@@ -1,0 +1,30 @@
+import random
+
+print("Введите количество элементов в массиве:")
+N=int(input())
+A=[0]*N
+
+for i in range(N):
+    A[i]=i+1
+
+print("Сгенерированный массив:")
+for i in A:
+    print(i,end = " ")
+
+print(" ")
+print("Введите число Х:")
+X=int(input())
+
+for i in range(N):
+    if A[i]==X:
+        print("Самое близкое по величине к заданному число Х:",{A[i-1]})
+        statement = True
+        break
+   
+    elif A[i]!=X:
+        statement = False
+
+
+
+if statement==False:
+   print("Самое близкое по величине к заданному число Х:", {A[N-1]})        

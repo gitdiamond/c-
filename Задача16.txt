@@ -1,0 +1,23 @@
+import random
+
+print("Введите количество элементов в массиве:")
+N=int(input())
+A=[0]*N
+
+for i in range(N):
+    A[i]=random.randint(0,100)
+
+print("Сгенерированный массив:")
+for i in A:
+    print(i,end = " ")
+
+print(" ")
+print("Введите число, которое нужно найти:")
+X=int(input())
+sum=0
+
+for i in range(N):
+    if A[i]==X:
+        sum+=1
+
+print("Введёное число встречается в массиве:",{sum}, "раз")
